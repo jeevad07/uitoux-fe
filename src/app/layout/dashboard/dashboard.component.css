@@ -1,0 +1,67 @@
+.carousal-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.carousal-img {
+    width: 70% !important;
+}
+
+.carousal {
+    margin-top: 40px;
+}
+
+.carousal-img {
+    width: 100vw !important;
+    height: 600px !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide-1 {
+    background-image: url('../../../assets/image/slide-1.jpeg');
+}
+
+.slide-2 {
+    background-image: url('../../../assets/image/banner1.jpeg');
+}
+
+.slide-3 {
+    background-image: url('../../../assets/image/banner2.jpeg');
+}
+
+::ng-deep .carousel-indicators {
+    display: none !important;
+}
+
+::ng-deep .carousel-control-prev {
+    display: none !important;
+}
+
+::ng-deep .carousel-control-next-icon {
+    display: none !important;
+}
+
+.carousal-btn {
+    width: 15px !important;
+    border-radius: 50% !important;
+    height: 15px !important;
+    margin: 8px;
+}
+
+.active {
+    background-color: #07db96 !important;
+}
+
+.caroual-first-content {
+    display: flex;
+    margin-bottom: 400px;
+    color: #302e23;
+    background-color: #ffdc40;
+    width: 110px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 25px;
+}

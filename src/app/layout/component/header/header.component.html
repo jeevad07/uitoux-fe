@@ -1,0 +1,118 @@
+<header fxLayout="column" fxLayoutGap="12px">
+    <div fxFlex class="container-size">
+        <ul class=" headingCard" fxLayout="row" fxLayoutAlign="start center" fxFlex="50" fxLayoutGap="18px">
+            <li>About us</li>
+            <li>Contacts</li>
+            <li>Store Location</li>
+            <li>Track Order</li>
+            <li>Blog</li>
+        </ul>
+
+        <ul class="headingCard" fxLayout="row" fxLayoutAlign="end  center" fxFlex="50" fxLayoutGap="18px">
+            <li>Compare: <span class="font-bold">2</span></li>
+            <li>Currency: <span class="font-bold">RS</span></li>
+            <li>Language: <span class="font-bold">EN</span></li>
+        </ul>
+    </div>
+    <div fxFlex>
+        <div class="headingCard container-size-left" fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="70"
+            fxLayoutGap="18px">
+            <img class="companylogo" alt="logo">
+            <!-- <svg version="1.1" viewBox="0 0 2048 2048" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(190,383)" d="m0 0h1666l17 2 12 5 11 7 11 11 7 11 5 13 1 4v23l-4 13-6 12-11 12-9 7-13 6-14 3h-1680l-13-3-12-6-10-8-7-7-8-13-4-11-2-12 1-16 5-16 7-11 10-11 10-7 15-6z"/>
+                <path transform="translate(190,959)" d="m0 0h1410l17 2 12 5 11 7 12 12 8 14 4 13v23l-4 13-6 12-11 12-9 7-13 6-14 3h-1424l-13-3-12-6-10-8-7-7-8-13-4-11-2-12 1-16 5-16 7-11 10-11 10-7 15-6z"/>
+                <path transform="translate(190,1535)" d="m0 0h834l17 2 12 5 11 7 12 12 8 14 4 13v23l-4 13-6 12-11 12-9 7-13 6-14 3h-848l-13-3-12-6-10-8-7-7-8-13-4-11-2-12 1-16 5-16 7-11 10-11 10-7 15-6z"/>
+                </svg> -->
+
+            <select name="currency" class="Vehicle" placeholder="Select Vehicle">
+                <option value="EUR">🚘&emsp;Select Vehicle&emsp;</option>
+                <option value="EUR">🚘&emsp;Car&emsp;</option>
+                <option value="EUR">🚲&emsp;Bike&emsp;</option>
+                <!-- <option value="USD">💵&emsp;$&emsp;USD&emsp;💵</option> -->
+            </select>
+            <div class="search-input">
+                <input type="text" class="txt-box" name="q" placeholder="Enter keyword or Part number">
+                <svg id="run-search" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                    <path
+                        d="M17.49 16.56l-4.44-4.44a.4.4 0 0 0-.29-.12h-.36a7.1 7.1 0 1 0-.4.4v.351a.414.414 0 0 0 .13.292l4.44 4.44a.408.408 0 0 0 .58 0l.34-.341a.417.417 0 0 0 0-.582zM7.15 13.201a6.058 6.058 0 1 1 6.06-6.058 6.055 6.055 0 0 1-6.06 6.058z"
+                        style="fill:#b2b2b2;fill-rule:evenodd" />
+                </svg>
+            </div>
+        </div>
+        <div class="headingCard container-size-right" fxLayout="row" fxLayoutAlign="end center" fxFlex="30"
+            fxLayoutGap="18px">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#232323" class="bi bi-heart"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg><span class='badge badge-warning' id='lblCartCount'> 0 </span>
+            </div>
+            <div class="user" fxLayout="row" fxLayoutGap="10px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 20 20" id="profile">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#000" transform="translate(-420 -2159)">
+                            <g transform="translate(56 160)">
+                                <path
+                                    d="M374 2009c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4m3.758.673A5.983 5.983 0 0 0 380 2005a6 6 0 1 0-9.758 4.673c-3.659 1.375-6.242 4.772-6.242 9.327h2c0-5 3.589-8 8-8s8 3 8 8h2c0-4.555-2.583-7.952-6.242-9.327">
+                                </path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div><span class="username">Hello, Log In</span>
+                    <div class="font-bold">My Account</div>
+                </div>
+            </div>
+            <div class="user-cart" fxLayout="row" fxLayoutGap="10px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 85 85" id="cart">
+                    <path
+                        d="M91.8 27.3 81.1 61c-.8 2.4-2.9 4-5.4 4H34.4c-2.4 0-4.7-1.5-5.5-3.7L13.1 19H4c-2.2 0-4-1.8-4-4s1.8-4 4-4h11.9c1.7 0 3.2 1.1 3.8 2.7L36 57h38l8.5-27H35.4c-2.2 0-4-1.8-4-4s1.8-4 4-4H88c1.3 0 2.5.7 3.2 1.7.8 1 1 2.4.6 3.6zm-55.4 43c-1.7 0-3.4.7-4.6 1.9-1.2 1.2-1.9 2.9-1.9 4.6 0 1.7.7 3.4 1.9 4.6 1.2 1.2 2.9 1.9 4.6 1.9s3.4-.7 4.6-1.9c1.2-1.2 1.9-2.9 1.9-4.6 0-1.7-.7-3.4-1.9-4.6-1.2-1.2-2.9-1.9-4.6-1.9zm35.9 0c-1.7 0-3.4.7-4.6 1.9s-1.9 2.9-1.9 4.6c0 1.7.7 3.4 1.9 4.6 1.2 1.2 2.9 1.9 4.6 1.9 1.7 0 3.4-.7 4.6-1.9 1.2-1.2 1.9-2.9 1.9-4.6 0-1.7-.7-3.4-1.9-4.6s-2.9-1.9-4.6-1.9z">
+                    </path>
+                </svg><span class='badge badge-warning' id='lblCartCounts'> 0 </span>
+                <div><span class="username">Hello, Log In</span>
+                    <div class="font-bold">My Account</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div fxFlex class="horizontal-line">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="80" fxLayoutGap="20px"
+            class="container-size-left">
+            <div class="cursor-pointer" fxLayoutGap="20px" fxLayout="row">
+                <svg version="1.1" viewBox="0 0 2048 2048" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    class="font-bold hamburger">
+                    <path transform="translate(190,383)"
+                        d="m0 0h1666l17 2 12 5 11 7 11 11 7 11 5 13 1 4v23l-4 13-6 12-11 12-9 7-13 6-14 3h-1680l-13-3-12-6-10-8-7-7-8-13-4-11-2-12 1-16 5-16 7-11 10-11 10-7 15-6z" />
+                    <path transform="translate(190,959)"
+                        d="m0 0h1410l17 2 12 5 11 7 12 12 8 14 4 13v23l-4 13-6 12-11 12-9 7-13 6-14 3h-1424l-13-3-12-6-10-8-7-7-8-13-4-11-2-12 1-16 5-16 7-11 10-11 10-7 15-6z" />
+                    <path transform="translate(190,1535)"
+                        d="m0 0h834l17 2 12 5 11 7 12 12 8 14 4 13v23l-4 13-6 12-11 12-9 7-13 6-14 3h-848l-13-3-12-6-10-8-7-7-8-13-4-11-2-12 1-16 5-16 7-11 10-11 10-7 15-6z" />
+                </svg>
+                <div fxLayout="row" style="width: max-content;" class="shop-content font-bold">
+                    Shop By Category
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#bfbfbf"
+                    id="down-arrow" class="downarrowsvg">
+                    <path
+                        d="M22.782 13.8 17 19.582 11.218 13.8a1 1 0 0 0-1.414 1.414L16.29 21.7a.992.992 0 0 0 .71.292.997.997 0 0 0 .71-.292l6.486-6.486a1 1 0 0 0-1.414-1.414z">
+                    </path>
+                </svg>
+            </div>
+            <div class="vertical-line"></div>
+            <div *ngFor="let title of titleCard" class="font-bold cursor-pointer" fxLayout="row">
+                <div>{{title}}</div>
+                <svg *ngIf="title?.toLowerCase() != 'buy theme'" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#bfbfbf"
+                    id="down-arrow">
+                    <path
+                        d="M22.782 13.8 17 19.582 11.218 13.8a1 1 0 0 0-1.414 1.414L16.29 21.7a.992.992 0 0 0 .71.292.997.997 0 0 0 .71-.292l6.486-6.486a1 1 0 0 0-1.414-1.414z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="headingCard container-size-right" fxLayout="row" fxLayoutAlign="end center" fxFlex="20"
+            fxLayoutGap="10px">
+            <div>Call Us: <span class="font-bold">8925297807</span></div>
+        </div>
+    </div>
+</header>
