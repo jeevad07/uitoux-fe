@@ -23,18 +23,18 @@ select {
     width: 300px;
     background-color: #ededed;
     padding-left: 9px;
+    outline: none;
 }
 
 #run-search {
     position: relative;
-    top: 4px;
-    padding-right: 9px;
+    /* top: 4px; */
+    padding-right: -150px;
 }
 
 .search-input {
     background-color: #ededed;
-    padding-bottom: 5px;
-    padding-top: 1px;
+    padding:8px;
 }
 
 .badge {

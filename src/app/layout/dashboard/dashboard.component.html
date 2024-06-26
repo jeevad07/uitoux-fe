@@ -1,5 +1,5 @@
 <div class="container-size carousal">
-    @if (images) {
+   
     <ngb-carousel>
         <ng-template ngbSlide>
             <div class="picsum-img-wrapper carousal-center">
@@ -8,26 +8,36 @@
             <div class="carousel-caption">
                 <div class="caroual-first-content"> 30% OFF
                 </div>
-                <!-- When Buying Parts
-                With Installation
-                Installation of parts in the services of
-                our partners. -->
+                <div class="silder-content">
+                <span class="slider-blod-lines">When Buying Parts<br>
+                With Installation</span><br>
+                <span style="color:#6d7379;">Installation of parts in the services of <br>
+                our partners.</span>
+                <div class="shope-btn">
+                    Shope Now
+                </div>
+                </div>
                 <button class="carousal-btn active"></button>
                 <button class="carousal-btn"></button>
                 <button class="carousal-btn"></button>
             </div>
         </ng-template>
-        <ng-template ngbSlide>
+     <ng-template ngbSlide>
             <div class="picsum-img-wrapper carousal-center">
                 <div alt="Random second slide" class="carousal-img slide-2"></div>
             </div>
             <div class="carousel-caption">
                 <div class="caroual-first-content"> 30% OFF
                 </div>
-                <!-- When Buying Parts
-                With Installation
-                Installation of parts in the services of
-                our partners. -->
+                <div class="silder-content">
+                <span class="slider-blod-lines">When Buying Parts<br>
+                With Installation</span><br>
+                <span style="color:#6d7379;">Installation of parts in the services of <br>
+                our partners.</span>
+                  <div class="shope-btn">
+                    Shope Now
+                </div>
+                </div>
                 <button class="carousal-btn"></button>
                 <button class="carousal-btn active"></button>
                 <button class="carousal-btn"></button>
@@ -40,15 +50,87 @@
             <div class="carousel-caption">
                 <div class="caroual-first-content"> 30% OFF
                 </div>
-                <!-- When Buying Parts
-                With Installation
-                Installation of parts in the services of
-                our partners. -->
+                <div class="silder-content">
+                <span class="slider-blod-lines">When Buying Parts<br>
+                With Installation</span><br>
+                <span style="color:#6d7379;">Installation of parts in the services of <br>
+                our partners.</span>
+                  <div class="shope-btn">
+                    Shope Now
+                </div>
+                </div>
                 <button class="carousal-btn"></button>
                 <button class="carousal-btn"></button>
                 <button class="carousal-btn active"></button>
             </div>
         </ng-template>
     </ngb-carousel>
-    }
+    
+
+    <div class="grid-container">
+    <div class="grid-item brand-img-1"><span class="brand-name">AIMPARTS</span></div>
+    <div class="grid-item brand-img-2"><span class="brand-name">WINDENGINE</span></div>
+    <div class="grid-item brand-img-3"><span class="brand-name">TURBOELECTRIC</span></div>
+    <div class="grid-item brand-img-4"><span class="brand-name">STARTONE</span></div>
+    <div class="grid-item brand-img-5"><span class="brand-name">BRANDIX</span></div>
+    <div class="grid-item brand-img-6"><span class="brand-name">ABS-BRAND</span></div>
+    <div class="grid-item brand-img-12"><span class="brand-name">GREATCIRCLE</span></div>
+    <div class="grid-item brand-img-13"><span class="brand-name">JUSTROMB</span></div>
+    <div class="grid-item brand-img-7"><span class="brand-name">FASTWHEELS</span></div>
+    <div class="grid-item brand-img-8"><span class="brand-name">STROYKA-X</span></div>
+    <div class="grid-item brand-img-9"><span class="brand-name">MISSION-51</span></div>
+    <div class="grid-item brand-img-10"><span class="brand-name">FUELCORP</span></div>
+    <div class="grid-item brand-img-11"><span class="brand-name">REDGATE</span></div>
+    <div class="grid-item brand-img-14"><span class="brand-name">BLOCKS</span></div>
+    <div class="grid-item brand-img-15"><span class="brand-name">BLACKBOX</span></div>
+    <div class="grid-item brand-img-16"><span class="brand-name">SQUAREGARAGE</span></div>
+    </div>
+
+    <div class="featured-products">
+         <ul ngbNav #nav="ngbNav" class="products-filter-heading" >
+            <div class="font-bold product-headline">Featured Products</div>
+            <li ngbNavItem>
+                <button ngbNavLink>All</button>
+                <ng-template ngbNavContent >
+                    <div class="product-container">
+                            <div class="product-details">1</div>
+                            <div class="product-details">2</div>
+                            <div class="product-details">3</div>
+                            <div class="product-details">4</div>
+                            <div class="product-details">5</div>   
+                    </div>
+                </ng-template>
+              </li>
+              <li ngbNavItem>
+                <button ngbNavLink>Power Tools</button>
+                <ng-template ngbNavContent >Second content</ng-template>
+              </li>
+              <li ngbNavItem>
+                <button ngbNavLink>Hand Tools</button>
+                <ng-template ngbNavContent >First content</ng-template>
+              </li>
+              <li ngbNavItem>
+                <button ngbNavLink>Plumbing</button>
+                <ng-template ngbNavContent >Second content</ng-template>
+              </li>
+            <li ngbNavItem class="side-arrow-btn">
+              <button ngbNavLink disabled> 
+               {{leftarrow}}
+            </button>
+            </li>
+            <li ngbNavItem class="side-arrow-btn">
+              <button ngbNavLink disabled>
+                >
+            </button>
+            </li>
+
+          </ul>
+
+          <div [ngbNavOutlet]="nav"></div>
+      
+    </div>
+
+
+    <div style="padding-bottom: 500px;"></div>
+
 </div>
