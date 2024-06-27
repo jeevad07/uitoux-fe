@@ -238,12 +238,69 @@
 .product-container{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Creates 5 columns of equal width */
-    gap: 10px; /* Optional: adds space between the grid items */
-    width: 100%; /* Optional: adjust based on your layout needs */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px;
+    height: 380px;
 }
 .product-details{
     border: 1px solid #000;
-    padding: 20px;
-    text-align: center;
+    padding: 7px;
+    border: #ebebeb 1px solid;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.list-product{
+    height: 60%;
+    position: relative;
+}
+.zoom-out-icon{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.product-img01{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/image/product-1.jpeg');
+}
+/* .product-slide{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45% auto;
+}
+
+.slide-1_product{
+    background-image: url('../../../assets/image/brand-1.png');
+} */
+
+.modelid{
+    color: #99999b;
+}
+.rating-card{
+    color: gold;
+    font-size: 20px;
+}
+
+.reviewCount{
+    font-size: 15px;
+    margin-left: 5px;
+    color: #99999b;
+}
+
+.svg-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.svg-container svg{
+    fill: #c8c8c8;
+}
+
+.cover-template-container{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
 }
