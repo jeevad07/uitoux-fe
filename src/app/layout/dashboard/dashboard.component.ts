@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { NgbNavConfig, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppServiceService } from '../../app-service.service'; 
+
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -14,107 +17,27 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 export class DashboardComponent {
 
   leftarrow='<';
-
-  // productDetails=[{
-  //   imgUrl:"/src/assets/image/product-1.jpeg",
-  //   hot:true,
-  //   sku:"A43-44328-B",
-  //   name:"Glossy Gray 19' Aluminium Wheel AR-19",
-  //   rating:4,
-  //   review:26,
-  //   rate:"$589"
-  // },
-  // {
-  //   imgUrl:"/src/assets/image/product-1.jpeg",
-  //   hot:true,
-  //   sku:"A43-44328-B",
-  //   name:"Glossy Gray 19' Aluminium Wheel AR-19",
-  //   rating:4,
-  //   review:26,
-  //   rate:"$589"
-  // },
-  // {
-  //   imgUrl:"../../../assets/image/product-1.jpeg",
-  //   hot:true,
-  //   sku:"A43-44328-B",
-  //   name:"Glossy Gray 19' Aluminium Wheel AR-19",
-  //   rating:4,
-  //   review:26,
-  //   rate:"$589"
-  // },
-  // {
-  //   imgUrl:"../../../assets/image/product-1.jpeg",
-  //   hot:true,
-  //   sku:"A43-44328-B",
-  //   name:"Glossy Gray 19' Aluminium Wheel AR-19",
-  //   rating:4,
-  //   review:26,
-  //   rate:"$589"
-  // },
-  // {
-  //   imgUrl:"../../../assets/image/product-1.jpeg",
-  //   hot:true,
-  //   sku:"A43-44328-B",
-  //   name:"Glossy Gray 19' Aluminium Wheel AR-19",
-  //   rating:4,
-  //   review:26,
-  //   rate:"$589"
-  // }]
+  productDetails:any;
 
 
-  productDetails=[{
-    imgUrl:"/src/assets/image/product-1.jpeg",
-    hot:true,
-    sku:"A43-44328-B",
-    name:"Glossy Gray 19' Aluminium Wheel AR-19",
-    rating:4,
-    review:26,
-    rate:"$589"
-  },
-  {
-    imgUrl:"/src/assets/image/product-1.jpeg",
-    hot:true,
-    sku:"A43-44328-B",
-    name:"Glossy Gray 19' Aluminium Wheel AR-19",
-    rating:4,
-    review:26,
-    rate:"$589"
-  },
-  {
-    imgUrl:"../../../assets/image/product-1.jpeg",
-    hot:true,
-    sku:"A43-44328-B",
-    name:"Glossy Gray 19' Aluminium Wheel AR-19",
-    rating:4,
-    review:26,
-    rate:"$589"
-  },
-  {
-    imgUrl:"../../../assets/image/product-1.jpeg",
-    hot:true,
-    sku:"A43-44328-B",
-    name:"Glossy Gray 19' Aluminium Wheel AR-19",
-    rating:4,
-    review:26,
-    rate:"$589"
-  },
-  {
-    imgUrl:"../../../assets/image/product-1.jpeg",
-    hot:true,
-    sku:"A43-44328-B",
-    name:"Glossy Gray 19' Aluminium Wheel AR-19",
-    rating:4,
-    review:26,
-    rate:"$589"
-  }]
-
-
-  constructor(config: NgbRatingConfig){
+  constructor(public config: NgbRatingConfig,private service:AppServiceService ){
     config.max = 5;
 		config.readonly = true;
+
   }
 
   ngOnInit(): void {
+   this.getDetailsProduct()
   }
+
+  getDetailsProduct(){
+    this.service.getProductdata().subscribe((data:any)=>{
+      this.productDetails=data;
+    })
+  }
+  getBackgroundImage(base64Data: string): string {
+    return `url(data:image/png;base64,${base64Data})`;
+  }
+
 
 }
