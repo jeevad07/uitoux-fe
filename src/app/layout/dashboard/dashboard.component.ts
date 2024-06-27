@@ -3,10 +3,11 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { NgbNavConfig, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NgbCarouselModule,NgbNavModule,CommonModule,NgbRatingModule],
+  imports: [NgbCarouselModule,NgbNavModule,CommonModule,NgbRatingModule,FlexLayoutModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
